@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camreynolds/mern-authentication-authorization.git"
+  },
+  "keywords": [
+    "backend",
+    "mern"
+  ],
+  "author": "camreynolds",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camreynolds/mern-authentication-authorization/issues"
+  },
+  "homepage": "https://github.com/camreynolds/mern-authentication-authorization#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.2"
+  }
+}
