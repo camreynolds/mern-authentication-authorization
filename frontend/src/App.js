@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 
 function App() {
   return (
-   <Button>Hello</Button>
+    <Button>Hello</Button>
   );
 }
 
