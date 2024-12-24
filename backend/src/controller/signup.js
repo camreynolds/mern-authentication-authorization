@@ -1,5 +1,7 @@
-const User = require("../models/User")
 const bcrypt = require("bcrypt")
+
+// import user model
+const User = require("../models/User")
 
 async function createUser (req,res){
   try {
