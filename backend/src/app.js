@@ -1,7 +1,8 @@
 require("dotenv").config()
 const express = require("express")
+const {createAdminAccount} = require("./scripts/admin")
 
-// import user router
+// user router
 const signupRouter = require("./routes/signup")
 
 // app
@@ -13,6 +14,9 @@ app.use((req,res,next)=>{
   console.log(req.path, req.method)
   next()
 })
+
+// create admin account
+createAdminAccount()
 
 // endpoints
 app.use("/user",signupRouter)
