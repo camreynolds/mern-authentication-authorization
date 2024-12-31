@@ -3,8 +3,9 @@ const express = require("express")
 const {createAdminAccount} = require("./scripts/admin")
 
 // user router
-const signupRouter = require("./routes/signup")
-const loginRouter = require("./routes/login")
+const signupRoute = require("./routes/signup")
+const loginRoute = require("./routes/login")
+const authenticatedRoute = require("./routes/authenticated")
 
 // app
 const app = express()
@@ -20,8 +21,9 @@ app.use((req,res,next)=>{
 createAdminAccount()
 
 // endpoints
-app.use("/user",signupRouter)
-app.use("/auth",loginRouter)
+app.use("/user",signupRoute)
+app.use("/auth",loginRoute)
+app.use("/api", authenticatedRoute)
 
 // server
 app.listen(process.env.PORT, ()=>{

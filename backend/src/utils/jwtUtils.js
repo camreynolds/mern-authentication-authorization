@@ -3,7 +3,7 @@ const secretKey = require("../configuration/jwtConfig")
 
 const generateToken = (user) =>{
   const payload = {
-    name: user.name,
+    id: user._id,
     email: user.email,
     role: user.role
   }
@@ -12,7 +12,7 @@ const generateToken = (user) =>{
 
 const generateRefreshToken = (user) =>{
   const payload = {
-    name: user.name,
+    id: user._id,
     email: user.email,
     role: user.role
   }
